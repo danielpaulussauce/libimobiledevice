@@ -79,7 +79,7 @@ int main(int argc, char **argv)
 		}
 		else if (!strcmp(argv[i], "-u") || !strcmp(argv[i], "--udid")) {
 			i++;
-			if (!argv[i] || (strlen(argv[i]) != 40)) {
+			if (!argv[i]) {
 				print_usage(argc, argv);
 				result = 0;
 				goto cleanup;

@@ -99,12 +99,8 @@ static void parse_opts(int argc, char **argv)
 			print_usage(argc, argv);
 			exit(EXIT_SUCCESS);
 		case 'u':
-			if (strlen(optarg) != 40) {
-				printf("%s: invalid UDID specified (length != 40)\n", argv[0]);
-				print_usage(argc, argv);
-				exit(2);
-			}
-			if (udid)
+			
+        if (udid)
 				free(udid);
 			udid = strdup(optarg);
 			break;
